@@ -8,7 +8,7 @@ function Header() {
                 <ul>
                     <li><image>Ajouter logo du site</image></li>
                     <li><Link to="/">Accueil</Link></li>
-                    <li><Link to="/">A Propos</Link></li>
+                    <li><Link to="/about">A Propos</Link></li>
                 </ul>
             </nav>
         </header>
