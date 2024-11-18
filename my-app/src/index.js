@@ -6,7 +6,6 @@ import Apartments from './pages/Apartments'
 import About from './pages/About'
 import Error from './pages/Error'
 import Header from './components/Header'
-import './styles/app.css'
 
  
 ReactDOM.render(
