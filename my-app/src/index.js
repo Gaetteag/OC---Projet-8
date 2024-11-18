@@ -8,7 +8,8 @@ import Error from './pages/Error'
 import Header from './components/Header'
 
  
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
         <Router>
           <Header />
@@ -21,4 +22,4 @@ ReactDOM.render(
         </Router>
         </React.StrictMode>,
   document.getElementById('root')
-)
+);
