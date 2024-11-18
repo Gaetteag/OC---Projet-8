@@ -14,8 +14,8 @@ function AppRouter() {
           <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/" element={<Apartments />} />
-              <Route path="/" element={<About />} />
+              <Route path="/apartments" element={<Apartments />} />
+              <Route path="/about" element={<About />} />
               <Route path="*" element={<Error />} />
             </Routes>
         </Router>
