@@ -1,0 +1,20 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 50px auto;
+}
+
+.links-navbar {
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    list-style-type: none;
+    gap: 60px;
+}
+
+.links-navbar .activePage {
+    text-decoration: underline;
+    
+}

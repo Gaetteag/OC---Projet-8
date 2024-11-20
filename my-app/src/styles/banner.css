@@ -1,0 +1,13 @@
+.homeBanner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeBanner h1 {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    position: absolute;
+}
