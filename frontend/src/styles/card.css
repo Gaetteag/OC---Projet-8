@@ -1,0 +1,19 @@
+.cards {
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 25px;
+    max-width: 1240px;
+    margin: 50px auto;
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+.cards img {
+    background-color: #FF6060;
+    border-radius: 10px;
+    height: 340px;
+    width: 340px;
+}
