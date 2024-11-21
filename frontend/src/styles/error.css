@@ -5,20 +5,20 @@ main {
 h1 {
     font-size: 288px;
     font-weight: 700;
-    color: rgba(255, 96, 96, 1);
+    color: rgb(255, 96, 96);
     margin: 120px 0;
 }
 
 p {
     font-size: 36px;
     font-weight: 500;
-    color: rgba(255, 96, 96, 1);
+    color: rgb(255, 96, 96);
 }
 
 .returnToHomePage {
     font-size: 18px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 1);
+    color: rgb(0, 0, 0);
     text-decoration: underline;
     display: block;
     margin: 120px 0;
