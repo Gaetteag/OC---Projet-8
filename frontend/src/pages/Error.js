@@ -3,12 +3,12 @@ import '../styles/error.css'
 
 function Error() {
     return (
-        <div>
-            <h2>404</h2>
+        <main>
+            <h1>404</h1>
             <p>Oups! La page que vous demandez n'existe pas.</p>
-            <Link to='/home'>Retourner sur la page d'accueil</Link>
-        </div>
+            <Link to='/' className='returnToHomePage'>Retourner sur la page d'accueil</Link>
+        </main>
     );
 }
 
-export default Error;
+export default Error
