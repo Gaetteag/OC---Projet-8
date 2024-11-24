@@ -1,13 +1,12 @@
 import '../styles/banner.css'
-import HomeBannerImage from '../assets/HomeBannerImage.svg'
 
-function Banner() {
+function Banner({bannerImgSrc, bannerTitle}) {
     return (
         <section>
-            <fig className='homeBanner'>
-                <img src={HomeBannerImage} alt="Bannière de la page d'accueil"></img>
-                <h1>Chez vous, partout et ailleurs</h1>
-            </fig>
+            <figure className='banner'>
+                <img src={bannerImgSrc} alt={bannerTitle}></img>
+                <h1>{bannerTitle}</h1>
+            </figure>
         </section>
     )
 }

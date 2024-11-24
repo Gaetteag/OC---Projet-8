@@ -1,17 +1,12 @@
 import '../styles/card.css'
-import ApartmentCard from '../assets/ApartmentCard.svg'
 
-function Card() {
+function Card({ApartmentCover, ApartmentTitle}) {
     return (
-        <section className='cards'> 
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
-            <img src={ApartmentCard} alt="Appartement" className='card'></img>
+        <section className='cards-container'> 
+            <figure className='card'>
+                <img src={ApartmentCover} alt="Appartement" className='cardImage'></img>
+                <figcaption className='cardTitle'>{ApartmentTitle}</figcaption>
+            </figure>
         </section>
     )
 }
