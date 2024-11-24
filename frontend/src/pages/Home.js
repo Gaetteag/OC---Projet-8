@@ -10,8 +10,8 @@ function Home() {
     useEffect(() => {
         fetch('http://localhost:8080/api/properties')
             .then((response) => response.json())
-            .then((data) => {
-                updateProperties(data)
+            .then((apartments) => {
+                updateProperties(apartments)
             })
             .catch((error) => console.error('Erreur lors de la récupération des données :', error));
     }, []);
