@@ -1,4 +1,4 @@
-.cards {
+.cards-container {
     background-color: rgb(246, 246, 246);
     border-radius: 25px;
     max-width: 1240px;
@@ -7,12 +7,11 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    row-gap: 50px;
+    justify-content: flex-start;
+    gap: 50px;
 }
 
-.cards img {
-    background-color: #FF6060;
+.card {
     border-radius: 10px;
     height: 340px;
     width: 340px;
