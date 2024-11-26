@@ -1,0 +1,27 @@
+.collapse-container {
+    max-width: 1240px;
+    margin: auto;
+}
+
+.collapse {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 96, 96);
+    width: 1023px;
+    height: 52px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    margin: 50px auto;
+}
+
+.collapseTitle {
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+.collapse img {
+    height: 32px;
+    width: 32px;
+    padding: 10px 20px;
+}
