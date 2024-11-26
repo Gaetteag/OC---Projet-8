@@ -5,13 +5,13 @@ import Card from '../components/Card';
 import HomeBannerImage from '../assets/HomeBannerImage.svg';
 
 function Home() {
-    const [properties, updateProperties] = useState([]);
+    const [properties, setProperties] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:8080/api/properties')
             .then((response) => response.json())
             .then((apartments) => {
-                updateProperties(apartments)
+                setProperties(apartments)
             })
             .catch((error) => console.error('Erreur lors de la récupération des données :', error));
     }, []);
