@@ -1,11 +1,13 @@
+import { useLocation } from 'react-router-dom';
 import '../styles/banner.css'
 
 function Banner({bannerImgSrc, bannerTitle}) {
+    const location = useLocation();
     return (
         <section>
             <figure className='banner'>
                 <img src={bannerImgSrc} alt={bannerTitle}></img>
-                <h1>{bannerTitle}</h1>
+                {location.pathname === '/' && <h1>{bannerTitle}</h1>}
             </figure>
         </section>
     )
