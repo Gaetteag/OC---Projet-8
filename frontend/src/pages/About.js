@@ -2,7 +2,7 @@ import '../styles/about.css'
 import Banner from '../components/Banner'
 import Collapse from '../components/Collapse'
 import AboutBannerImage from '../assets/AboutBannerImage.svg';
-import collapseContent from '../collapseContent'
+import collapseContent from '../data/collapseContent'
 
 function About() {
     return (
