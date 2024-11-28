@@ -9,6 +9,7 @@ function About() {
         <main>
             <Banner 
                 bannerImgSrc={AboutBannerImage}
+                bannerTitle="Bannière de la page à-propos"
             />            
             <section className='collapse-container'>
                 {collapseContent.map((item, index) => (
