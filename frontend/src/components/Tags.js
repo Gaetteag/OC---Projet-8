@@ -1,4 +1,4 @@
-import '../styles/tags.css'; // Si nécessaire, créez un fichier CSS spécifique
+import '../styles/tags.css';
 
 function Tags({ tags }) {
     return (
