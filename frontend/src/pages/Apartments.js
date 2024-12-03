@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Carrousel from '../components/Carrousel';
 import Collapse from '../components/Collapse';
+import Owner from '../components/Owner';
 import '../styles/apartments.css'
 
 function Apartments() {
@@ -34,13 +35,9 @@ function Apartments() {
                     <span key={index} className="apartmentTag">{tag}</span>
                 ))}
             </div>
-            <div className='hostInformations'>
-                <p className='hostName'>
-                    <span>{apartment.host.name.split(' ')[0]}</span>{/* Prénom */}
-                    <span>{apartment.host.name.split(' ')[1]}</span>{/* Nom */}
-                </p>
-                <img src={apartment.host.picture} alt={apartment.host.name} className='hostPicture'/>
-            </div>
+            <Owner 
+                name={apartment.host.name} picture={apartment.host.picture} 
+            />
             <div className='apartmentRating'>
                 <i className="fa-xs fa-solid fa-star" aria-hidden="true"></i>
                 <i className="fa-xs fa-solid fa-star" aria-hidden="true"></i>
