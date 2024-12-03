@@ -4,6 +4,7 @@ import Carrousel from '../components/Carrousel';
 import NameAndLocation from '../components/NameAndLocation';
 import Tags from '../components/Tags';
 import Owner from '../components/Owner';
+import Rating from '../components/Rating';
 import Collapse from '../components/Collapse';
 import '../styles/apartments.css'
 
@@ -40,14 +41,9 @@ function Apartments() {
             <Owner 
                 name={apartment.host.name} picture={apartment.host.picture} 
             />
-            <div className='apartmentRating'>
-                <i className="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                <i className="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                <i className="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                <i className="fa-xs fa-solid fa-star" aria-hidden="true"></i>
-                <i className="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                <span className="sr-only">Note de 4 sur 5</span>
-            </div>
+            <Rating 
+                rating={apartment.rating} 
+            />
             <Collapse>
                 <p>test collapse</p>
             </Collapse>
