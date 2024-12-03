@@ -1,9 +1,10 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Carrousel from '../components/Carrousel';
-import Collapse from '../components/Collapse';
+import NameAndLocation from '../components/NameAndLocation';
 import Tags from '../components/Tags';
 import Owner from '../components/Owner';
+import Collapse from '../components/Collapse';
 import '../styles/apartments.css'
 
 function Apartments() {
@@ -29,8 +30,10 @@ function Apartments() {
             <Carrousel 
                 pictures={apartment.pictures}
             />
-            <h1>{apartment.title}</h1>
-            <p className='apartmentLocation'>{apartment.location}</p>
+            <NameAndLocation 
+                title={apartment.title}
+                location={apartment.location} 
+            />
             <Tags 
                 tags={apartment.tags} 
             />
