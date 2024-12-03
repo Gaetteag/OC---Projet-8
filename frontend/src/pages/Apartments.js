@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Carrousel from '../components/Carrousel';
 import Collapse from '../components/Collapse';
+import Tags from '../components/Tags';
 import Owner from '../components/Owner';
 import '../styles/apartments.css'
 
@@ -30,11 +31,9 @@ function Apartments() {
             />
             <h1>{apartment.title}</h1>
             <p className='apartmentLocation'>{apartment.location}</p>
-            <div className='apartmentsTags'>
-                {apartment.tags.map((tag, index) => (
-                    <span key={index} className="apartmentTag">{tag}</span>
-                ))}
-            </div>
+            <Tags 
+                tags={apartment.tags} 
+            />
             <Owner 
                 name={apartment.host.name} picture={apartment.host.picture} 
             />
