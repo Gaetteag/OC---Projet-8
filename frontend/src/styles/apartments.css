@@ -4,16 +4,3 @@
     max-width: 1240px;
     margin: 0 auto;
 }
-
-.apartmentPage h1 {
-    font-size: 36px;
-    font-weight: 500;
-    margin: 30px 0 10px 0;
-}
-
-.apartmentLocation {
-    font-size: 18px;
-    font-weight: 500;
-    color: rgb(0, 0, 0);
-    margin-bottom: 20px;
-}
