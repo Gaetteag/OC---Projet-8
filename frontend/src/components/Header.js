@@ -8,7 +8,7 @@ function Header() {
     return (
         <header> 
             <nav className='navbar'>
-                <Link to="/"><img src={LogoHeaderDesktop} alt="Logo Kasa"></img></Link>
+                <Link to="/"><img src={LogoHeaderDesktop} alt="Logo Kasa" className='logo'></img></Link>
                 <ul className='links-navbar'>
                     <li>
                         <Link to="/" className={location.pathname === '/' ? 'activePage' : ''}>
