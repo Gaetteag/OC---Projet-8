@@ -23,3 +23,20 @@ p {
     display: block;
     margin: 120px 0;
 }
+
+@media (max-width: 599px) {
+    
+    h1 {
+      font-size: 96px;
+    }
+
+    p {
+        font-size: 18px;
+        max-width: 260px;
+        margin: auto;
+    }
+
+    .returnToHomePage {
+        font-size: 14px;
+    }
+}

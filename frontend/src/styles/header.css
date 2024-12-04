@@ -18,3 +18,20 @@
     text-decoration: underline;
     
 }
+
+@media (max-width: 599px) {
+    
+    .navbar {
+        margin: 20px;
+    }
+    
+    .logo {
+        content: url('../assets/LogoHeaderPhone.svg');
+    }
+
+    .links-navbar {
+        font-size: 12px;
+        text-transform: uppercase;
+        gap: 20px;
+    }
+}
