@@ -13,20 +13,29 @@ function Apartments() {
     const [apartment, setApartment] = useState(null);
     const navigate = useNavigate();
 
+    const collapseContent = apartment ? [
+        { title: 'Description', content: apartment.description },
+        { title: 'Équipements', content: apartment.equipments },
+    ] : [];
+
     useEffect(() => {
         fetch('http://localhost:8080/api/properties')
             .then((response) => response.json())
             .then((apartments) => {
                 const findApartment = apartments.find((apartment) => apartment.id === id);
-                findApartment ? setApartment(findApartment) : navigate('/erreur');
+                findApartment ? setApartment(findApartment) : navigate('/error');
             })
             .catch((error) => {
                 console.error('Erreur lors de la récupération des données :', error);
-                navigate('/erreur');
+                navigate('/error');
             });
     }, [id, navigate]);
 
-    return apartment ? (
+    if (!apartment) {
+        return null;
+    }
+
+    return (
         <div className='apartmentPage'>
             <Carrousel 
                 pictures={apartment.pictures}
@@ -44,16 +53,26 @@ function Apartments() {
             <Rating 
                 rating={apartment.rating} 
             />
-            <Collapse>
-                <p>test collapse</p>
-            </Collapse>
-            <Collapse>
-                <p>test collapse</p>
-            </Collapse>
+            <div className="collapseApartmentPage">
+                {collapseContent.map((item, index) => (
+                    <Collapse 
+                        key={index}
+                        title={item.title}
+                    >
+                        {Array.isArray(item.content) ? (
+                            <ul>
+                                {item.content.map((equipment, equipmentIndex) => (
+                                    <li key={equipmentIndex}>{equipment}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                            <p>{item.content}</p>
+                        )}
+                    </Collapse>
+                ))}
+            </div>
         </div>
-    ) : (
-        <p>L'appartement n'a pas été trouvé.</p>
-    );
+    )
 }
 
 export default Apartments;
