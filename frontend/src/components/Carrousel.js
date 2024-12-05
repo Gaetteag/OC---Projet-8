@@ -21,7 +21,7 @@ function Carrousel({ pictures, title }) {
     };
 
     return (
-        <div className="apartmentCarrousel">
+        <figure className="apartmentCarrousel">
             <img src={pictures[currentImageIndex]} alt={title} className="apartmentCarrouselImg" />
             {pictures.length > 1 && (
                 <div>
@@ -38,7 +38,7 @@ function Carrousel({ pictures, title }) {
                     <span>{currentImageIndex + 1}/{pictures.length}</span>
                 </div>
             )}
-        </div>
+        </figure>
     );
 }
 
