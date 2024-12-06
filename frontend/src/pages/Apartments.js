@@ -36,23 +36,29 @@ function Apartments() {
     }
 
     return (
-        <div className='apartmentPage'>
+        <section className='apartmentPage'>
             <Carrousel 
                 pictures={apartment.pictures}
             />
-            <NameAndLocation 
-                title={apartment.title}
-                location={apartment.location} 
-            />
-            <Tags 
-                tags={apartment.tags} 
-            />
-            <Owner 
-                name={apartment.host.name} picture={apartment.host.picture} 
-            />
-            <Rating 
-                rating={apartment.rating} 
-            />
+            <article className='apartmentInformations'>                    
+                <div className='apartmentNameLocationTags'>
+                    <NameAndLocation 
+                        title={apartment.title}
+                        location={apartment.location} 
+                    />
+                    <Tags 
+                        tags={apartment.tags} 
+                    />
+                </div>
+                <div className='apartmentOwnerRating'>
+                    <Owner 
+                        name={apartment.host.name} picture={apartment.host.picture} 
+                    />
+                    <Rating 
+                        rating={apartment.rating} 
+                    />
+                </div>
+            </article>
             <div className="collapseApartmentPage">
                 {collapseContent.map((item, index) => (
                     <Collapse 
@@ -66,12 +72,12 @@ function Apartments() {
                                 ))}
                             </ul>
                         ) : (
-                            <p>{item.content}</p>
+                            <div>{item.content}</div>
                         )}
                     </Collapse>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 
