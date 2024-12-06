@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../styles/home.css';
+import { Link } from 'react-router-dom';
 import Banner from '../components/Banner';
 import Card from '../components/Card';
 import HomeBannerImage from '../assets/HomeBannerImage.svg';
@@ -10,9 +10,7 @@ function Home() {
     useEffect(() => {
         fetch('http://localhost:8080/api/properties')
             .then((response) => response.json())
-            .then((apartments) => {
-                setProperties(apartments)
-            })
+            .then((apartments) => {setProperties(apartments)})
             .catch((error) => console.error('Erreur lors de la récupération des données :', error));
     }, []);
 
@@ -25,12 +23,13 @@ function Home() {
             <section className="cards-container">
                 {properties.length > 0 ? (
                     properties.map((property) => (
-                        <Card
-                            key={property.id}
-                            ApartmentCover={property.cover}
-                            ApartmentTitle={property.title}
-                        />
-                    ))
+                        <Link to={`/apartment/${property.id}`} key={property.id}>
+                            <Card
+                                ApartmentCover={property.cover}
+                                ApartmentTitle={property.title}
+                            />
+                        </Link>
+                        ))
                 ) : (
                     <p>Aucun appartement disponible</p>
                 )}
@@ -39,4 +38,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Home
