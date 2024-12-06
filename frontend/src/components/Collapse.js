@@ -10,20 +10,33 @@ function Collapse({ title, children }) {
     <figure className='collapse'>
       <div className='collapseContent' onClick={() => setIsOpen(!isOpen)}>
         <span className='collapseTitle'>{title}</span>
-        <img className='collapseArrow' src={CollapseArrow} alt='flèche de contenu déroulant' 
+        <img 
+          className='collapseArrow' 
+          src={CollapseArrow} 
+          alt='flèche de contenu déroulant' 
           style={{
             transform: isOpen ? 'rotate(-180deg)' : '',
             transition: 'transform 0.5s linear',
-          }}
+          }} 
         />
       </div>
-      <div className='collapseDescriptionContent' ref={contentRef} 
+      <div 
+        className='collapseDescriptionContent'
+        ref={contentRef} 
         style={{
           maxHeight: isOpen ? `${contentRef.current.scrollHeight}px` : '0px',
           transition: 'max-height 0.5s linear',
         }}
       >
-        {children}
+        {Array.isArray(children) ? (
+          <ul>
+            {children.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          children
+        )}
       </div>
     </figure>
   );
