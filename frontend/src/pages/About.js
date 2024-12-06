@@ -1,8 +1,7 @@
-import '../styles/about.css'
-import Banner from '../components/Banner'
-import Collapse from '../components/Collapse'
+import Banner from '../components/Banner';
+import Collapse from '../components/Collapse';
 import AboutBannerImage from '../assets/AboutBannerImage.svg';
-import collapseContent from '../data/collapseContent'
+import collapseContent from '../data/collapseContent';
 
 function About() {
     return (
@@ -11,16 +10,17 @@ function About() {
                 bannerImgSrc={AboutBannerImage}
                 bannerTitle="Bannière de la page à-propos"
             />            
-            <section className='collapse-container'>
+            <div className="collapseAboutPage page-about">
                 {collapseContent.map((item, index) => (
                     <Collapse 
-                        key={index} 
-                        title={item.title} 
-                    />
+                        key={index}
+                        title={item.title}>
+                        <div>{item.content}</div>
+                    </Collapse>
                 ))}
-            </section>
+            </div>
         </main>
-    )
+    );
 }
 
-export default About
+export default About;
