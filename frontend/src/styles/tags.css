@@ -1,10 +1,10 @@
 .apartmentsTags {
     display: flex;
-    border-radius: 10px;
     gap: 10px;
 }
 
 .apartmentTag {
+    min-width: 95px;
     height: 25px;
     padding: 0 10px;
     display: flex;
@@ -15,4 +15,20 @@
     color: rgb(255, 255, 255);
     background-color: rgb(255, 96, 96);
     border-radius: 10px; 
+}
+
+@media (max-width: 599px) {
+
+    .apartmentsTags {
+        flex-wrap: wrap;
+        margin: 0 0 15px 0;
+        width: 335px;
+    }
+    
+    .apartmentTag {
+        min-width: 64px;
+        height: 18px;
+        font-size: 10px;        
+        border-radius: 5px; 
+    }
 }

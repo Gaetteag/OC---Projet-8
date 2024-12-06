@@ -1,5 +1,6 @@
 .apartmentRating {
     display: flex;
+    margin-top: 35px;
     gap: 15px;
   }
   
@@ -18,4 +19,17 @@
     clip: rect(0, 0, 0, 0);
     clip-path: inset(50%);
     overflow: hidden;
+}
+
+@media (max-width: 599px) {
+    
+    .apartmentRating {
+        margin-top: 0;
+        gap: 5px;
+      }
+      
+    .stars {
+        width: 13.41px;
+        height: 13px;
+    }
 }

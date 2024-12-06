@@ -10,3 +10,18 @@
     color: rgb(0, 0, 0);
     margin-bottom: 20px;
 }
+
+@media (max-width: 599px) {
+    
+    .apartmentPage h1 {
+        font-size: 18px;
+        margin: 15px 0 5px 0;
+        max-width: 335px;
+        line-height: 1.5;
+    } 
+
+    .apartmentLocation {
+        font-size: 14px;
+        margin: 0 0 10px 0;
+    }
+}

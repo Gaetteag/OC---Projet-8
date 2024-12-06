@@ -35,3 +35,22 @@
     display: flex;
     align-items: flex-end;
 }
+
+@media (max-width: 599px) {
+    
+    .cards-container {
+        background-color: rgb(255, 255, 255);
+        border-radius: 25px;
+        max-width: 335px;
+        margin: 20px auto;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .cardImage {
+        height: 255px;
+        width: 335px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}

@@ -1,6 +1,7 @@
 .hostInformations {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
 }
 
@@ -17,4 +18,16 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
+}
+
+@media (max-width: 599px) {
+    
+    .hostName {
+        font-size: 12px;
+    }
+    
+    .hostPicture {
+        width: 32px;
+        height: 32px;
+    }
 }

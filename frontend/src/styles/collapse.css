@@ -3,21 +3,44 @@ html {
   overflow-y: auto;
 }
 
-.collapse {
+.collapseAboutPage {
     display: flex;
     flex-direction: column;
-    width: 1023px;
+    width: 100%;
+    max-width: 1023px;
     color: rgb(255, 255, 255);
-    margin: 30px auto;
+    margin: 10px auto 40px auto;
   }
   
+  .collapseApartmentPage {
+    display: flex;
+    width: 100%;
+    max-width: 1240px;
+    color: rgb(255, 255, 255);
+    margin: 10px 0 40px 0;
+    gap: 100px;
+  }
+  
+  .collapseAboutPage .collapseContent {
+    border-radius: 5px;
+  }
+
+  .collapseApartmentPage .collapseContent {
+    border-radius: 10px;
+  }
+
+  .collapse {
+    flex: 1;
+  }
+
   .collapseContent {
     display: flex;
+    width: 100%;
     height: 52px;
     justify-content: space-between;
     background-color: rgb(255, 96, 96);
-    border-radius: 5px;
     cursor: pointer;
+    margin-top: 30px;
   }
   
   .collapseTitle {
@@ -34,15 +57,77 @@ html {
   
   .collapseDescriptionContent {
     background-color: rgb(246, 246, 246);
-    border-radius: 0 0 5px 5px;
+    border-radius: 5px;
     overflow: hidden;
   }
   
-  .collapseDescriptionContent p {
+  .collapseDescriptionContent div {
     font-size: 18px;
     font-weight: 400;
     color: rgb(0, 0, 0);
-    padding: 15px 20px;
+    padding: 20px;
     text-align: left;
   }
+
+  .collapseDescriptionContent ul {
+    list-style-type: none;
+    padding: 20px 20px 10px 20px;
+    text-align: left;
+  }
+
+  .collapseDescriptionContent li {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    list-style-type: none;
+    margin-bottom: 5px;
+  }
   
+@media (max-width: 599px) {
+    
+  .collapseAboutPage {
+    max-width: 335px;
+    gap: 10px;
+  }   
+
+  .collapseApartmentPage {
+    flex-direction: column;
+    max-width: 335px;
+    margin: 0 auto 30px auto;
+    gap: 10px;
+  }
+
+  .collapseApartmentPage .collapseContent {
+    border-radius: 5px;
+  }
+
+  .collapseContent {
+    height: 30px;
+    align-items: center;
+    margin: 10px auto 0 auto;
+  }
+
+  .collapseTitle {
+    font-size: 13px;
+  }
+
+  .collapseArrow {
+    height: 16px;
+    width: 16px;
+    padding: 10px 20px;
+  }
+
+  .collapseDescriptionContent div {
+    font-size: 12px;
+    margin: 10px;
+    padding: 0;
+  }
+
+  .collapseDescriptionContent ul {
+    padding: 10px;
+  }
+
+  .collapseDescriptionContent li {
+    font-size: 10px;
+  }
+}
